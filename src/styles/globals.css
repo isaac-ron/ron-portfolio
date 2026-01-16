@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* Neo-Brutalist Theme */
+  --background: #faf8f3;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #0a0a0a;
+  --primary-foreground: #faf8f3;
+  --secondary: #f1f1f1;
+  --secondary-foreground: #0a0a0a;
+  --muted: #e8e8e8;
+  --muted-foreground: #6b6b6b;
+  --accent: #ff6b35;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #0a0a0a;
+  --input: #0a0a0a;
+  --input-background: #ffffff;
+  --switch-background: #e8e8e8;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: #0a0a0a;
+  
+  /* Bold Color Palette */
+  --electric-blue: #0066ff;
+  --hot-pink: #ff006e;
+  --vibrant-yellow: #ffbe0b;
+  --lime-green: #8ac926;
+  --deep-purple: #6a4c93;
+  --orange: #ff6b35;
+  --cream: #faf8f3;
+  --charcoal: #0a0a0a;
+  --grey: #6b6b6b;
+  
+  /* Brutalist Shadows */
+  --shadow-brutal: 6px 6px 0px 0px #0a0a0a;
+  --shadow-brutal-lg: 10px 10px 0px 0px #0a0a0a;
+  --shadow-brutal-hover: 8px 8px 0px 0px #0a0a0a;
+  
+  --chart-1: #0066ff;
+  --chart-2: #ff006e;
+  --chart-3: #ffbe0b;
+  --chart-4: #8ac926;
+  --chart-5: #ff6b35;
+  --radius: 0;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #0a0a0a;
+  --sidebar-primary-foreground: #faf8f3;
+  --sidebar-accent: #f1f1f1;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #0a0a0a;
+  --sidebar-ring: #0a0a0a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  
+  /* Bold Colors */
+  --color-electric-blue: var(--electric-blue);
+  --color-hot-pink: var(--hot-pink);
+  --color-vibrant-yellow: var(--vibrant-yellow);
+  --color-lime-green: var(--lime-green);
+  --color-deep-purple: var(--deep-purple);
+  --color-orange: var(--orange);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+  --color-grey: var(--grey);
+  
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+/**
+ * Brutalist typography
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"])):not(:has([class^="text-"]))) {
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: var(--text-xl);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: var(--text-lg);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: var(--text-base);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.6;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: 700;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+    }
+  }
+}
+
+/* Brutalist utilities */
+@layer utilities {
+  .brutal-border {
+    border: 3px solid var(--charcoal);
+  }
+  
+  .brutal-border-2 {
+    border: 2px solid var(--charcoal);
+  }
+  
+  .brutal-shadow {
+    box-shadow: var(--shadow-brutal);
+  }
+  
+  .brutal-shadow-lg {
+    box-shadow: var(--shadow-brutal-lg);
+  }
+  
+  .brutal-shadow-hover {
+    box-shadow: var(--shadow-brutal-hover);
+  }
+  
+  .bg-electric-blue {
+    background-color: var(--electric-blue);
+  }
+  
+  .bg-hot-pink {
+    background-color: var(--hot-pink);
+  }
+  
+  .bg-vibrant-yellow {
+    background-color: var(--vibrant-yellow);
+  }
+  
+  .bg-lime-green {
+    background-color: var(--lime-green);
+  }
+  
+  .bg-deep-purple {
+    background-color: var(--deep-purple);
+  }
+  
+  .bg-orange {
+    background-color: var(--orange);
+  }
+  
+  .text-electric-blue {
+    color: var(--electric-blue);
+  }
+  
+  .text-hot-pink {
+    color: var(--hot-pink);
+  }
+  
+  .text-vibrant-yellow {
+    color: var(--vibrant-yellow);
+  }
+  
+  .text-lime-green {
+    color: var(--lime-green);
+  }
+  
+  .text-deep-purple {
+    color: var(--deep-purple);
+  }
+  
+  .text-orange {
+    color: var(--orange);
+  }
+  
+  .border-electric-blue {
+    border-color: var(--electric-blue);
+  }
+  
+  .border-hot-pink {
+    border-color: var(--hot-pink);
+  }
+  
+  .border-vibrant-yellow {
+    border-color: var(--vibrant-yellow);
+  }
+  
+  .border-lime-green {
+    border-color: var(--lime-green);
+  }
+  
+  /* Hover shadow transition */
+  .hover-brutal {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-brutal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px 0px var(--charcoal);
+  }
+  
+  .hover-brutal:active {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px 0px var(--charcoal);
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
