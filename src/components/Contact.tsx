@@ -28,16 +28,16 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, title: 'Email', value: 'isaacron195@gmail.com', link: 'mailto:hello@alexdev.com', bg: 'bg-[var(--electric-blue)]' },
+    { icon: Mail, title: 'Email', value: 'isaacron195@gmail.com', link: 'mailto:isaacron195@gmail.com', bg: 'bg-[var(--electric-blue)]' },
     { icon: Phone, title: 'Phone', value: '+1 (555) 123-4567', link: 'tel:+15551234567', bg: 'bg-[var(--hot-pink)]' },
     { icon: MapPin, title: 'Location', value: 'Nairobi, KE', link: '#', bg: 'bg-[var(--vibrant-yellow)]' }
   ];
 
   const socialLinks = [
-    { icon: Github, name: 'GitHub', url: '#', bg: 'bg-[var(--charcoal)]' },
-    { icon: Linkedin, name: 'LinkedIn', url: '#', bg: 'bg-[var(--electric-blue)]' },
-    { icon: Twitter, name: 'Twitter', url: '#', bg: 'bg-[var(--hot-pink)]' },
-    { icon: Instagram, name: 'Instagram', url: '#', bg: 'bg-[var(--deep-purple)]' }
+    { icon: Github, name: 'GitHub', url: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
+    { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/ron-isaac-8132bb2b5/', bg: 'bg-[var(--electric-blue)]' },
+    { icon: Twitter, name: 'Twitter', url: 'https://x.com/ronisaac5d', bg: 'bg-[var(--hot-pink)]' },
+    { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/isaacxron', bg: 'bg-[var(--deep-purple)]' }
   ];
 
   return (

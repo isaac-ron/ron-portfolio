@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,11 +38,14 @@ const Navigation = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-2xl font-bold uppercase"
+            className="flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            RON<span className="text-[var(--electric-blue)]">ISAAC</span>
+            <Logo className="w-12 h-12" />
+            <span className="text-2xl font-bold uppercase hidden sm:block">
+              RON<span className="text-[var(--electric-blue)]">ISAAC</span>
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}

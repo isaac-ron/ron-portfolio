@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
-
+import Logo from './Logo';
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -32,9 +32,12 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-bold uppercase">
-                RON<span className="text-[var(--electric-blue)]">ISAAC</span>
-              </h3>
+              <div className="flex items-center gap-3">
+                <Logo className="w-10 h-10" />
+                <h3 className="text-3xl font-bold uppercase">
+                  RON<span className="text-[var(--electric-blue)]">ISAAC</span>
+                </h3>
+              </div>
               <p className="text-gray-300">
                 Web developer and ML enthusiast building bold digital experiences. 
                 Let's create something that stands out.
