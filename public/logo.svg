@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- A letter -->
+  <g transform="translate(12, 12)">
+    <!-- Main vertical bar -->
+    <rect x="0" y="0" width="10" height="40" fill="#0066ff" stroke="#000" stroke-width="2"/>
+    <!-- Horizontal bar -->
+    <rect x="6" y="18.5" width="8" height="6" fill="#ff006e" stroke="#000" stroke-width="2"/>
+    <!-- Bottom accent -->
+    <rect x="8" y="39" width="6" height="6" fill="#ffbe0b" stroke="#000" stroke-width="2"/>
+  </g>
+  
+  <!-- D letter -->
+  <g transform="translate(32, 12)">
+    <!-- Vertical bar -->
+    <rect x="0" y="0" width="6" height="40" fill="#8ac926" stroke="#000" stroke-width="2"/>
+    <!-- Top curve block -->
+    <rect x="6" y="0" width="6" height="6" fill="#ff006e" stroke="#000" stroke-width="2"/>
+    <!-- Middle curve block -->
+    <rect x="6" y="14" width="8" height="8" fill="#0066ff" stroke="#000" stroke-width="2"/>
+    <!-- Bottom curve block -->
+    <rect x="6" y="34" width="6" height="6" fill="#ffbe0b" stroke="#000" stroke-width="2"/>
+    <!-- Top accent -->
+    <rect x="-2" y="-2" width="4" height="4" fill="#ff006e" stroke="#000" stroke-width="1"/>
+  </g>
+</svg>
