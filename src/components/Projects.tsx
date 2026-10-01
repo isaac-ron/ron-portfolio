@@ -15,6 +15,7 @@ const Projects = () => {
     featured: boolean;
     client?: boolean;
     demoUrl?: string;
+    demoLabel?: string;
     githubUrl?: string;
   }[] = [
     {
@@ -47,8 +48,10 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'MongoDB', 'M-PESA Daraja', 'Bank IPN APIs', 'Socket.IO'],
       category: 'Venture',
       bg: 'bg-[var(--deep-purple)]',
+      image: '/projects/feedesk.jpg',
       featured: true,
       demoUrl: 'https://feedesk-frontend.onrender.com/',
+      demoLabel: 'Staging',
       githubUrl: 'https://github.com/isaac-ron/FeeDesk'
     },
     {
@@ -204,7 +207,7 @@ const Projects = () => {
                     whileTap={{ scale: 0.98 }}
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Live
+                    {project.demoLabel ?? 'Live'}
                   </motion.a>
                   )}
 
@@ -325,7 +328,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className={`flex-1 text-center py-2 ${project.bg} text-white brutal-border-2 font-bold text-sm uppercase`}
                     >
-                      Live Site
+                      {project.demoLabel ?? 'Live Site'}
                     </a>
                     )}
                     {project.githubUrl && (

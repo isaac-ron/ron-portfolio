@@ -2,39 +2,79 @@ import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap } from 'lucide-react';
 
 const Experience = () => {
-  const roles = [
+  type Point = { lead?: string; text: string };
+
+  const roles: {
+    title: string;
+    org: string;
+    place: string;
+    dates: string;
+    bg: string;
+    summary: string;
+    points: Point[];
+  }[] = [
     {
       title: 'Freelance Web Developer',
       org: 'Independent',
       place: 'Nairobi, Kenya',
       dates: 'Apr 2026 – Present',
       bg: 'bg-[var(--electric-blue)]',
+      summary: 'Paid client work for NGOs and a regional media network, from requirements through to handover.',
       points: [
-        "ACNA (Association of Care Leavers Networks in Africa): for the launch of its flagship East Africa chapter, built the network's membership application and the websites of two founding member networks, Virtue Literacy Africa and Second Chances Kenya.",
-        'The Nile Explorer: rebuilt a South Sudan-focused media network\'s news site on Next.js and Sanity, migrated its WordPress archive and handed it over with documentation for the newsroom.',
-        'Worked directly with each client to turn organisational goals into requirements and delivered on self-managed timelines.'
+        {
+          lead: 'ACNA',
+          text: "For the launch of the Association of Care Leavers Networks in Africa's flagship East Africa chapter, built the membership application networks use to join, setting out the eligibility rules (care-leaver-led leadership, independence from donors and political parties) ahead of review by the management committee."
+        },
+        {
+          lead: 'Virtue Literacy Africa',
+          text: 'Built the site for a founding member network working on literacy in pastoralist, refugee and arid communities across Kenya, Ethiopia and South Sudan. Staff publish blog posts, events, team profiles and gallery images themselves through Keystatic, a git-based CMS, on Astro.'
+        },
+        {
+          lead: 'Second Chances Kenya',
+          text: 'Built the site for a founding member network supporting young people leaving care. Designed for care leavers arriving on low-bandwidth phones: help by WhatsApp, phone or email is one tap away, a quick-exit button covers anyone in an unsafe situation, and supporters get clear routes to donate, partner or refer.'
+        },
+        {
+          lead: 'The Nile Explorer',
+          text: "Rebuilt a media network's site (news, podcast, documentaries and festival) on Next.js with an embedded Sanity Studio. Publishing revalidates pages on demand, so the newsroom never waits on a rebuild, and read and share counts rank the front page's Top stories. Wrote a repeatable WordPress migration with a dry-run mode, and a handover manual covering both the publishing workflow and code maintenance."
+        },
+        {
+          text: 'Worked directly with each client to gather requirements and turn organisational goals into working sites, delivered on self-managed timelines.'
+        }
       ]
     },
     {
       title: 'Volunteer Web Developer & Trainer',
       org: 'Vijana Empowerment Initiative CBO',
-      place: 'Bomet, Kenya',
+      place: 'Sotik, Bomet County, Kenya',
       dates: 'May 2026 – Present',
       bg: 'bg-[var(--lime-green)]',
+      summary: 'A community organisation training school leavers, young mothers and youth with disabilities in fashion, beauty, mechanics and digital work.',
       points: [
-        "Designed and built the organisation's website.",
-        'Teach web development to young people and marginalised members of the community.'
+        {
+          text: "Designed and built the organisation's website in Next.js and TypeScript, presenting its four trade programmes and impact, and routing visitors to apply as trainees or back one with a donation."
+        },
+        {
+          text: 'Help run web development training for young people and marginalised members of the community.'
+        }
       ]
     },
     {
       title: 'IT Support Intern',
-      org: 'Kenya Revenue Authority, IT Service Delivery',
+      org: 'Kenya Revenue Authority',
       place: 'Nairobi, Kenya',
       dates: 'Jan 2026 – Mar 2026',
       bg: 'bg-[var(--hot-pink)]',
+      summary: 'IT Service Delivery Department, supporting the systems behind national tax administration.',
       points: [
-        'Provided first-line support for enterprise hardware, software and network issues on critical tax administration systems.',
-        'Documented issues, tracked resolutions and coordinated with senior IT staff on fixes.'
+        {
+          text: 'Provided first-line technical support and troubleshooting for enterprise hardware, software and network issues, keeping downtime on critical tax administration systems to a minimum.'
+        },
+        {
+          text: 'Documented user issues, tracked them through to resolution and kept teams updated on status.'
+        },
+        {
+          text: 'Coordinated with senior IT staff to implement fixes beyond first-line scope.'
+        }
       ]
     },
     {
@@ -43,8 +83,14 @@ const Experience = () => {
       place: 'Njoro, Kenya',
       dates: 'Mar 2025',
       bg: 'bg-[var(--vibrant-yellow)]',
+      summary: 'Team lead for the winning entry.',
       points: [
-        'Led a team of three to build a customer-service platform (React, MongoDB) with OCR-based QR check-in using Tesseract.js, cutting average response time by 25%.'
+        {
+          text: 'Led a team of three to build a customer-service platform in React and MongoDB.'
+        },
+        {
+          text: 'Added OCR-based QR check-in using Tesseract.js, cutting average response time by 25%.'
+        }
       ]
     }
   ];
@@ -53,14 +99,23 @@ const Experience = () => {
     {
       title: 'BSc Computer Science',
       org: 'Kabarak University',
-      dates: 'Expected Dec 2026 (coursework complete)',
-      detail: 'Data Structures & Algorithms, Database Systems, Web Development, Machine Learning'
+      place: 'Nakuru, Kenya',
+      dates: 'Expected Dec 2026',
+      points: [
+        'Coursework complete.',
+        'CGPA: 74%.',
+        'Relevant coursework: Data Structures & Algorithms, Database Systems, Web Development, Machine Learning.'
+      ]
     },
     {
-      title: 'Data Analytics Certification',
+      title: 'Data Analytics Program with Professional Skills',
       org: 'ALX',
-      dates: 'Apr 2026',
-      detail: 'SQL, Excel, Power BI and Python (Pandas) reporting dashboards'
+      place: 'Certification',
+      dates: 'Graduated Apr 2026',
+      points: [
+        'Collated, cleaned and structured datasets from multiple sources into reporting dashboards using SQL, Excel, Power BI and Python (Pandas).',
+        'Professional skills track: time management, prioritisation, written and verbal communication, and working in cross-functional teams.'
+      ]
     }
   ];
 
@@ -108,9 +163,13 @@ const Experience = () => {
                     {role.dates}
                   </span>
                 </div>
-                <ul className="space-y-2 text-[var(--grey)] list-disc pl-5">
+                <p className="mb-4 font-medium">{role.summary}</p>
+                <ul className="space-y-3 text-[var(--grey)] list-disc pl-5">
                   {role.points.map((point) => (
-                    <li key={point}>{point}</li>
+                    <li key={point.text}>
+                      {point.lead && <span className="font-bold text-[var(--charcoal)]">{point.lead}: </span>}
+                      {point.text}
+                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -134,8 +193,13 @@ const Experience = () => {
                   <h4 className="font-bold uppercase">{item.title}</h4>
                 </div>
                 <p className="font-semibold">{item.org}</p>
+                <p className="text-sm text-[var(--grey)]">{item.place}</p>
                 <p className="text-sm font-bold uppercase">{item.dates}</p>
-                <p className="text-[var(--grey)]">{item.detail}</p>
+                <ul className="space-y-2 text-[var(--grey)] list-disc pl-5 pt-1">
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </motion.div>
