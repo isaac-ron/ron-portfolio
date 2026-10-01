@@ -5,6 +5,7 @@ const Hero = () => {
   const now = [
     { label: 'Building', text: 'FeeDesk, a school fee platform on M-PESA and bank APIs' },
     { label: 'Freelancing', text: "Sites for ACNA's East Africa chapter and The Nile Explorer" },
+    { label: 'Learning', text: 'Data engineering with ALX: Airflow, Spark and Docker pipelines' },
     { label: 'Finishing', text: 'BSc Computer Science, Kabarak University (Dec 2026)' }
   ];
 
@@ -77,6 +78,16 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 Contact Me
+              </motion.a>
+
+              <motion.a
+                href="/Ron_Isaac_Otieno_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-[var(--vibrant-yellow)] brutal-border brutal-shadow hover-brutal font-bold uppercase tracking-wide"
+                whileTap={{ scale: 0.98 }}
+              >
+                Resume
               </motion.a>
             </motion.div>
 

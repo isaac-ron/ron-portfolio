@@ -10,12 +10,12 @@ const Skills = () => {
     {
       title: 'Data, Cloud & ML',
       bg: 'bg-[var(--hot-pink)]',
-      skills: ['PostgreSQL', 'MongoDB', 'Supabase', 'AWS', 'Power BI', 'Excel', 'Pandas', 'TensorFlow/Keras', 'scikit-learn', 'Hugging Face', 'CNNs', 'NLP']
+      skills: ['PostgreSQL', 'MongoDB', 'Supabase', 'AWS', 'Power BI', 'Excel', 'Pandas', 'Airflow', 'Spark', 'TensorFlow/Keras', 'scikit-learn', 'Hugging Face', 'CNNs', 'NLP']
     },
     {
       title: 'Tools & Integrations',
       bg: 'bg-[var(--lime-green)]',
-      skills: ['Git/GitHub', 'REST API design', 'M-PESA Daraja API', 'Docker', 'Sanity', 'Keystatic', 'Raspberry Pi', 'Arduino']
+      skills: ['Git/GitHub', 'REST API design', 'M-PESA Daraja API', 'Docker', 'Linux', 'Sanity', 'Keystatic', 'Raspberry Pi', 'Arduino']
     }
   ];
 

@@ -102,18 +102,28 @@ const Experience = () => {
       place: 'Nakuru, Kenya',
       dates: 'Expected Dec 2026',
       points: [
-        'Coursework complete.',
-        'CGPA: 74%.',
-        'Relevant coursework: Data Structures & Algorithms, Database Systems, Web Development, Machine Learning.'
+        'Coursework complete; on track for First Class Honours (CGPA 74%).',
+        'Relevant coursework: Data Structures & Algorithms, Database Systems, Object-Oriented Programming, Web Development, Machine Learning.'
+      ]
+    },
+    {
+      title: 'Data Engineering Program',
+      org: 'ALX',
+      place: 'Certification, in progress',
+      dates: 'May 2026 – Present',
+      points: [
+        'Building ETL pipelines in Python, orchestrated with Airflow, containerised with Docker and scaled out with Spark.',
+        'Covering batch and streaming ingestion, data modelling and architecture, and data security practices.'
       ]
     },
     {
       title: 'Data Analytics Program with Professional Skills',
       org: 'ALX',
       place: 'Certification',
-      dates: 'Graduated Apr 2026',
+      dates: 'Sep 2025 – Apr 2026',
       points: [
-        'Collated, cleaned and structured datasets from multiple sources into reporting dashboards using SQL, Excel, Power BI and Python (Pandas).',
+        'Project-based program in data cleaning, exploratory analysis, visualisation and reporting.',
+        'Combined datasets from multiple sources into reporting dashboards using SQL, Excel, Power BI and Python (Pandas).',
         'Professional skills track: time management, prioritisation, written and verbal communication, and working in cross-functional teams.'
       ]
     }

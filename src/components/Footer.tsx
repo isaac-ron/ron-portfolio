@@ -88,12 +88,13 @@ const Footer = () => {
                   { name: 'isaacron195@gmail.com', href: 'mailto:isaacron195@gmail.com' },
                   { name: 'GitHub', href: 'https://github.com/isaac-ron' },
                   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ron-otieno/' },
-                  { name: 'Hugging Face', href: 'https://huggingface.co/ron4444444' }
+                  { name: 'Hugging Face', href: 'https://huggingface.co/ron4444444' },
+                  { name: 'Resume (PDF)', href: '/Ron_Isaac_Otieno_Resume.pdf' }
                 ].map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      target={link.href.startsWith('mailto') ? undefined : '_blank'}
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-[var(--electric-blue)] transition-colors font-semibold"
                     >

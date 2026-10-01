@@ -26,8 +26,8 @@ const About = () => {
     },
     {
       icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Combining messy datasets into dashboards with SQL, Power BI and Pandas.',
+      title: 'Data',
+      description: 'Dashboards with SQL, Power BI and Pandas, and ETL pipelines with Airflow and Spark.',
       bg: 'bg-[var(--lime-green)]',
       borderColor: 'border-[var(--lime-green)]'
     }

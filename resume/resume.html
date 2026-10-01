@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ron Isaac Otieno – Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 9mm 12mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: 9.8pt; line-height: 1.2; color: #111; }
+  a { color: #1a3d8f; text-decoration: none; }
+  header { text-align: center; margin-bottom: 5pt; }
+  h1 { font-size: 19pt; font-weight: 600; letter-spacing: .3pt; }
+  .contact { font-size: 9.6pt; margin-top: 1pt; }
+  .summary { margin: 4pt 0 2pt; text-align: center; font-style: italic; }
+  h2 { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: .6pt; color: #444;
+       border-bottom: .9pt solid #111; margin: 6pt 0 2.5pt; padding-bottom: 1pt; }
+  .entry { margin-bottom: 3pt; }
+  .row { display: flex; justify-content: space-between; gap: 10pt; }
+  .row .l { font-weight: 700; }
+  .row .r { white-space: nowrap; }
+  .sub { color: #555; }
+  .stack { color: #666; font-weight: 400; }
+  ul { margin: 1pt 0 0 13pt; }
+  li { margin-bottom: 1pt; }
+  .skills p { margin-bottom: 1pt; }
+  .skills b { font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Ron Isaac Otieno</h1>
+  <div class="contact">
+    Nairobi, Kenya &nbsp;|&nbsp; <a href="mailto:isaacron195@gmail.com">isaacron195@gmail.com</a> &nbsp;|&nbsp;
+    <a href="https://github.com/isaac-ron">github.com/isaac-ron</a> &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/ron-otieno/">linkedin.com/in/ron-otieno</a> &nbsp;|&nbsp;
+    <a href="https://ron-portfolio-qrjc.vercel.app/">Portfolio</a>
+  </div>
+  <p class="summary">Computer science student (graduating December 2026) building full-stack products, machine learning systems and data pipelines.
+  Seeking software engineering internships or junior roles, and data analyst or data engineering roles.</p>
+</header>
+
+<h2>Experience</h2>
+<div class="entry">
+  <div class="row"><span class="l">Freelance Web Developer</span><span class="r">Nairobi, Kenya</span></div>
+  <div class="row"><span class="sub">Independent</span><span class="r">Apr 2026 – Present</span></div>
+  <ul>
+    <li><b>Association of Care Leavers Networks in Africa (ACNA):</b> for the launch of its flagship East Africa chapter, built the network’s membership application and the websites of two founding member networks, Virtue Literacy Africa and Second Chances Kenya. Staff manage content through a git-based headless CMS (Astro, Keystatic).</li>
+    <li><b>The Nile Explorer:</b> rebuilt a regional media network’s news site on Next.js and Sanity, with on-demand revalidation on publish and readership-ranked Top stories; migrated the WordPress archive with a repeatable, dry-run-capable script and wrote a handover manual for the newsroom.</li>
+    <li>Gathered requirements directly with clients and delivered on self-managed timelines.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">IT Support Intern</span><span class="r">Nairobi, Kenya</span></div>
+  <div class="row"><span class="sub">Kenya Revenue Authority, IT Service Delivery Department</span><span class="r">Jan 2026 – Mar 2026</span></div>
+  <ul>
+    <li>Provided first-line technical support and troubleshooting for enterprise hardware, software and network issues, keeping downtime on critical tax administration systems to a minimum.</li>
+    <li>Documented user issues, tracked resolutions and communicated status updates across teams, coordinating with senior IT staff to implement fixes.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<div class="entry">
+  <div class="row"><span class="l">FeeDesk – Multi-tenant School Fee Platform <span class="stack">| React, Node.js, MongoDB, M-Pesa Daraja, Bank IPN APIs</span></span><span class="r">Jan 2026 – Present</span></div>
+  <ul>
+    <li>Designed and built the backend services and database schema for a multi-tenant platform that reconciles M-Pesa and bank payments against student fee balances.</li>
+    <li>Integrated Safaricom Daraja webhooks and bank IPN APIs as a passive payment listener feeding one reporting view.</li>
+    <li>Led product scoping and requirements gathering, including data-compliance research. Running on staging ahead of a planned school pilot.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">CrisisConnect – NLP Crisis Detection &amp; Triage <span class="stack">| TypeScript, Node.js, PostgreSQL, Python, ONNX</span></span><span class="r">Sep 2025</span></div>
+  <ul>
+    <li>Built the backend and data pipeline for a crisis-reporting app, from raw report ingestion (including offline-queued reports) through model classification to a real-time alert API.</li>
+    <li>Fine-tuned two RoBERTa classifiers evaluated on held-out disasters: priority macro F1 0.416 (baseline 0.273) and urgent recall 60% (baseline 36%); int8-quantized to ONNX (515 MB to 130 MB) to run on a free 512 MB instance.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">WasteNet – CNN Waste Classification <span class="stack">| Python, Flask, TensorFlow/Keras, Raspberry Pi 4, Arduino Uno</span></span><span class="r">Sep 2025</span></div>
+  <ul>
+    <li>Fine-tuned a CNN for recyclable/organic sorting (88.9% accuracy, 94.2% precision, 92.7% recall), served from a Flask backend on a Raspberry Pi 4 driving Arduino sorting hardware, with a dashboard for live and uploaded-image inference.</li>
+  </ul>
+</div>
+
+<h2>Education &amp; Certifications</h2>
+<div class="entry">
+  <div class="row"><span class="l">Kabarak University</span><span class="r">Nakuru, Kenya</span></div>
+  <div class="row"><span class="sub">BSc Computer Science – on track for First Class Honours (CGPA 74%), coursework complete</span><span class="r">Expected Dec 2026</span></div>
+  <div>Coursework: Data Structures &amp; Algorithms, Database Systems, OOP, Web Development, Machine Learning</div>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">ALX Data Engineering Program</span><span class="r">May 2026 – Present</span></div>
+  <ul>
+    <li>Building ETL pipelines in Python, orchestrated with Airflow, containerised with Docker and scaled out with Spark.</li>
+    <li>Covering batch and streaming ingestion, data modelling and architecture, and data security practices.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">ALX Data Analytics Program with Professional Skills</span><span class="r">Sep 2025 – Apr 2026</span></div>
+  <ul>
+    <li>Project-based program in data cleaning, exploratory analysis and visualisation, combining multi-source datasets into dashboards with SQL, Excel, Power BI and Pandas.</li>
+    <li>Professional skills: time management, prioritisation, communication and cross-functional teamwork.</li>
+  </ul>
+</div>
+
+<h2>Leadership &amp; Activities</h2>
+<div class="entry">
+  <div class="row"><span class="l">Vijana Empowerment Initiative CBO – Volunteer Web Developer &amp; Trainer</span><span class="r">May 2026 – Present</span></div>
+  <ul><li>Built the website for a Bomet youth training organisation; assist with web development training for local youth.</li></ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">Egerton JavaScript Conference Hackathon – Winner</span><span class="r">Mar 2025</span></div>
+  <ul><li>Led a team of three to build a customer-service platform (React, MongoDB) with OCR-based QR check-in using Tesseract.js, cutting average response time by 25%.</li></ul>
+</div>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><b>Languages:</b> Python, JavaScript, TypeScript, SQL</p>
+  <p><b>Web &amp; Backend:</b> React, Next.js, Node.js, Express, Flask, Astro, REST APIs, M-Pesa Daraja API</p>
+  <p><b>Data &amp; ML:</b> PostgreSQL, MongoDB, Supabase, Pandas, Power BI, Excel, Airflow, Spark, TensorFlow/Keras, scikit-learn, Hugging Face</p>
+  <p><b>Tools &amp; Cloud:</b> Git/GitHub, Docker, AWS, Linux, Sanity, Keystatic</p>
+</div>
+</body>
+</html>

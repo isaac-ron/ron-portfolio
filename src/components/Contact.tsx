@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, FileText, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -26,6 +26,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, title: 'Email', value: 'isaacron195@gmail.com', link: 'mailto:isaacron195@gmail.com', bg: 'bg-[var(--electric-blue)]' },
+    { icon: FileText, title: 'Resume', value: 'Download PDF', link: '/Ron_Isaac_Otieno_Resume.pdf', bg: 'bg-[var(--hot-pink)]' },
     { icon: MapPin, title: 'Location', value: 'Nairobi, KE', link: undefined, bg: 'bg-[var(--vibrant-yellow)]' }
   ];
 
