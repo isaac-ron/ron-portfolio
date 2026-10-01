@@ -8,6 +8,7 @@ const Projects = () => {
     title: string;
     description: string;
     image?: string;
+    screens?: string[];
     technologies: string[];
     category: string;
     bg: string;
@@ -20,7 +21,7 @@ const Projects = () => {
       id: 1,
       title: 'CrisisConnect',
       description: 'Community crisis reporting with ML triage. Residents report emergencies from their phone (even offline); fine-tuned RoBERTa models classify and prioritize reports, related reports are grouped into incidents, and trust comes from corroboration across independent reporters, photo evidence and USGS/GDACS alerts. Models are int8-quantized ONNX (515 MB to 130 MB) so the ML service fits on a free 512 MB instance.',
-      image: 'https://raw.githubusercontent.com/isaac-ron/TSCrisisConnect/main/docs/screenshots/map.png',
+      screens: ['/projects/crisisconnect-alerts.jpg', '/projects/crisisconnect-dashboard.jpg', '/projects/crisisconnect-map.jpg'],
       technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Hugging Face', 'ONNX'],
       category: 'ML + Full Stack',
       bg: 'bg-[var(--hot-pink)]',
@@ -29,42 +30,34 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'The Nile Explorer',
+      description: 'News and analysis site for a media network covering peace, governance and geopolitics in South Sudan and the Nile basin, with articles, a podcast and video. Editors publish from an embedded Sanity Studio and pages refresh on publish without a rebuild. I migrated the existing archive from WordPress and handed the site over with documentation for the newsroom.',
+      image: '/projects/nile.jpg',
+      technologies: ['Next.js', 'TypeScript', 'Sanity', 'Tailwind CSS'],
+      category: 'Client · Media',
+      bg: 'bg-[var(--electric-blue)]',
+      featured: true,
+      demoUrl: 'https://www.nileexplorer.com',
+      githubUrl: 'https://github.com/isaac-ron/nile-explorer'
+    },
+    {
+      id: 3,
       title: 'FeeDesk',
-      description: "A venture I'm building: a multi-tenant fee platform for schools. Safaricom Daraja webhooks and bank IPN APIs feed transactions from every source into one reporting view, alongside term-based billing, SMS receipts and role-based access for admins, bursars and teachers.",
+      description: "A venture I'm building: a multi-tenant fee platform for schools. Safaricom Daraja webhooks and bank IPN APIs feed transactions from every source into one reporting view, alongside term-based billing, SMS receipts and role-based access for admins, bursars and teachers. Not yet in production; The Grace Schools is the planned pilot.",
       technologies: ['React', 'Node.js', 'MongoDB', 'M-PESA Daraja', 'Bank IPN APIs', 'Socket.IO'],
       category: 'Venture',
-      bg: 'bg-[var(--electric-blue)]',
+      bg: 'bg-[var(--deep-purple)]',
       featured: true,
       demoUrl: 'https://feedesk-frontend.onrender.com/',
       githubUrl: 'https://github.com/isaac-ron/FeeDesk'
     },
     {
-      id: 3,
-      title: 'Grace Schools Portal',
-      description: 'Admin, staff and parent portal for The Grace Schools, Chepilat. Row-level security on all 25 Postgres tables (checked by 71 authorization tests), CSV enrolment with a dry-run preview, and a teacher attendance register that saves offline and sends when signal returns. Runs on Cloudflare Workers and Supabase free tiers for KES 0 a month. Marks and report cards are next.',
-      technologies: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Cloudflare Workers'],
-      category: 'Full Stack · In Progress',
-      bg: 'bg-[var(--deep-purple)]',
-      featured: true,
-      githubUrl: 'https://github.com/isaac-ron/grace-schools-portal'
-    },
-    {
       id: 4,
-      title: 'The Nile Explorer',
-      description: 'Site for a media network covering peace, governance and geopolitics in South Sudan and the Nile basin: articles, podcast and video. Editors publish from an embedded Sanity Studio and pages refresh on publish without a rebuild. Content migrated from WordPress.',
-      technologies: ['Next.js', 'Sanity', 'TypeScript'],
-      category: 'Media',
-      bg: 'bg-[var(--hot-pink)]',
-      featured: false,
-      client: true,
-      githubUrl: 'https://github.com/isaac-ron/nile-explorer'
-    },
-    {
-      id: 5,
       title: 'Virtue Literacy Africa',
-      description: 'Site for an NGO advancing literacy for children and youth in pastoralist, refugee and arid communities across Kenya, Ethiopia and South Sudan. Blog, events, team and gallery are editable through Keystatic.',
+      description: "Site for an NGO advancing literacy for children in pastoralist, refugee and arid communities across Kenya, Ethiopia and South Sudan, and a founding member network of ACNA's East Africa chapter. Staff edit the blog, events, team and gallery through Keystatic.",
+      image: '/projects/vla.jpg',
       technologies: ['Astro', 'Keystatic', 'TypeScript'],
-      category: 'NGO',
+      category: 'Client · ACNA',
       bg: 'bg-[var(--orange)]',
       featured: false,
       client: true,
@@ -72,46 +65,25 @@ const Projects = () => {
       githubUrl: 'https://github.com/isaac-ron/virtueliteracyafrica'
     },
     {
-      id: 6,
+      id: 5,
       title: 'Second Chances Kenya',
-      description: 'Site for an NGO giving young people leaving care in Kenya practical support: counselling, education, legal aid and community.',
+      description: "Site for an NGO supporting young people leaving care with counselling, education, legal aid and community, and a founding member network of ACNA's East Africa chapter. Includes a quick-exit button so visitors can leave the page safely.",
+      image: '/projects/sc.jpg',
       technologies: ['Astro', 'TypeScript'],
-      category: 'NGO',
-      bg: 'bg-[var(--electric-blue)]',
+      category: 'Client · ACNA',
+      bg: 'bg-[var(--hot-pink)]',
       featured: false,
       client: true,
       demoUrl: 'https://preview.secondchances.co.ke/',
       githubUrl: 'https://github.com/isaac-ron/secondchances'
     },
     {
-      id: 7,
-      title: 'Vijana Empowerment Initiative',
-      description: 'Site for a community organisation in Sotik, Bomet County, offering vocational training, mentorship and entrepreneurship support to vulnerable youth.',
-      technologies: ['Next.js', 'TypeScript', 'Prisma'],
-      category: 'Community',
-      bg: 'bg-[var(--lime-green)]',
-      featured: false,
-      client: true,
-      demoUrl: 'https://vijanaempowermentcbo.org',
-      githubUrl: 'https://github.com/isaac-ron/Vijana-Empowerment-CBO'
-    },
-    {
-      id: 8,
-      title: 'The Grace Schools',
-      description: 'Public website for a faith-based primary school in Chepilat, Bomet County.',
-      technologies: ['Next.js', 'TypeScript'],
-      category: 'School',
-      bg: 'bg-[var(--deep-purple)]',
-      featured: false,
-      client: true,
-      githubUrl: 'https://github.com/isaac-ron/grace-schools'
-    },
-    {
-      id: 9,
-      title: 'ACNA Membership Form',
-      description: 'Membership application for the Association of Care Leavers Networks in Africa.',
+      id: 6,
+      title: 'ACNA Membership Application',
+      description: 'Application form and eligibility criteria for networks joining the Association of Care Leavers Networks in Africa.',
+      image: '/projects/acna.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      category: 'NGO',
+      category: 'Client · ACNA',
       bg: 'bg-[var(--vibrant-yellow)]',
       featured: false,
       client: true,
@@ -119,7 +91,33 @@ const Projects = () => {
       githubUrl: 'https://github.com/isaac-ron/acna-form'
     },
     {
-      id: 10,
+      id: 7,
+      title: 'The Grace Schools',
+      description: 'Website for a faith-based CBE school in Chepilat, Bomet County, running Pre-Primary through Grade 9 with a boarding section. A staff and parent portal for the school is in development.',
+      image: '/projects/grace.jpg',
+      technologies: ['Next.js', 'TypeScript'],
+      category: 'School',
+      bg: 'bg-[var(--deep-purple)]',
+      featured: false,
+      client: true,
+      demoUrl: 'https://thegraceschools.co.ke',
+      githubUrl: 'https://github.com/isaac-ron/grace-schools'
+    },
+    {
+      id: 8,
+      title: 'Vijana Empowerment Initiative',
+      description: 'Volunteer build for a community organisation in Sotik, Bomet County, that trains school leavers, young mothers and youth with disabilities in fashion, beauty, mechanics and digital work.',
+      image: '/projects/vijana.jpg',
+      technologies: ['Next.js', 'TypeScript', 'Prisma'],
+      category: 'Volunteer',
+      bg: 'bg-[var(--lime-green)]',
+      featured: false,
+      client: true,
+      demoUrl: 'https://vijanaempowermentcbo.org',
+      githubUrl: 'https://github.com/isaac-ron/Vijana-Empowerment-CBO'
+    },
+    {
+      id: 9,
       title: 'WasteNet',
       description: 'CNN that sorts waste into recyclable and organic (88.9% accuracy, 94.2% precision, 92.7% recall), deployed on a Raspberry Pi 4 driving Arduino sorting hardware, with a Flask dashboard for live and uploaded-image inference.',
       technologies: ['TensorFlow/Keras', 'Flask', 'Raspberry Pi'],
@@ -128,18 +126,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 11,
-      title: 'ReRoot Africa',
-      description: 'Media website, built from a high-fidelity Figma design.',
-      technologies: ['React', 'TypeScript', 'Tailwind'],
-      category: 'Web Dev',
-      bg: 'bg-[var(--orange)]',
-      featured: false,
-      demoUrl: 'https://rerootafrica.vercel.app',
-      githubUrl: 'https://github.com/isaac-ron/rerootafrica'
-    },
-    {
-      id: 12,
+      id: 10,
       title: 'KES Currency Converter',
       description: 'Small Python package for converting currencies with the Kenyan Shilling as the base rate.',
       technologies: ['Python'],
@@ -237,17 +224,30 @@ const Projects = () => {
               </div>
 
               <motion.div
-                className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}
+                className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''} ${project.image || project.screens ? '' : 'hidden lg:block'}`}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.2 }}
               >
                 <div className="relative">
                   <div className={`absolute -bottom-4 -right-4 w-full h-full ${project.bg} brutal-border`} />
                   <div className="relative brutal-border-2 overflow-hidden bg-white">
-                    {project.image ? (
+                    {project.screens ? (
+                      <div className="w-full h-80 lg:h-96 grid grid-cols-3 gap-3 p-4 bg-[var(--cream)]">
+                        {project.screens.map((src) => (
+                          <ImageWithFallback
+                            key={src}
+                            src={src}
+                            alt={`${project.title} screenshot`}
+                            loading="lazy"
+                            className="w-full h-full object-cover object-top brutal-border-2"
+                          />
+                        ))}
+                      </div>
+                    ) : project.image ? (
                       <ImageWithFallback
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} screenshot`}
+                      loading="lazy"
                         className="w-full h-80 lg:h-96 object-cover object-top"
                       />
                     ) : (
@@ -280,24 +280,26 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
+                {project.image && (
                 <div className="relative brutal-border-2 border-t-0 border-x-0 overflow-hidden">
-                  {project.image ? (
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-48 flex items-end p-4 pt-16 bg-[var(--cream)]">
-                      <span className="text-2xl font-bold uppercase">{project.title}</span>
-                    </div>
-                  )}
+                  <ImageWithFallback
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    loading="lazy"
+                    className="w-full h-48 object-cover object-top"
+                  />
                   <div className={`absolute top-4 left-4 ${project.bg} text-white px-3 py-1 brutal-border-2 font-bold text-xs uppercase`}>
                     {project.category}
                   </div>
                 </div>
+                )}
 
                 <div className="p-6 space-y-4">
+                  {!project.image && (
+                    <div className={`inline-block ${project.bg} text-white px-3 py-1 brutal-border-2 font-bold text-xs uppercase`}>
+                      {project.category}
+                    </div>
+                  )}
                   <h4 className="text-xl font-bold uppercase">{project.title}</h4>
                   <p className="text-[var(--grey)]">{project.description}</p>
 

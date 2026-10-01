@@ -41,17 +41,11 @@ const Footer = () => {
               </div>
               <p className="text-gray-300">
                 Full-stack and machine learning developer in Nairobi, building
-                payment platforms, crisis-response tools and NGO websites.
+                payment platforms, crisis-response tools and websites for NGOs and newsrooms.
               </p>
               <div className="flex items-center gap-2 text-sm">
                 <span>Made with</span>
-                <motion.span
-                  className="text-[var(--hot-pink)]"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  ❤
-                </motion.span>
+                <span className="text-[var(--hot-pink)]">❤</span>
                 <span>& React + Tailwind</span>
               </div>
             </motion.div>
@@ -132,12 +126,7 @@ const Footer = () => {
             whileTap={{ scale: 0.95 }}
           >
             Back to Top
-            <motion.div
-              animate={{ y: [-2, 0, -2] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ArrowUp className="w-4 h-4" />
-            </motion.div>
+            <ArrowUp className="w-4 h-4" />
           </motion.button>
         </motion.div>
       </div>

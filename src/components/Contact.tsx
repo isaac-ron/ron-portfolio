@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -32,15 +32,14 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, name: 'GitHub', url: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
     { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/ron-otieno/', bg: 'bg-[var(--electric-blue)]' },
-    { icon: Twitter, name: 'Twitter', url: 'https://x.com/ronisaac5d', bg: 'bg-[var(--hot-pink)]' },
-    { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/isaacxron', bg: 'bg-[var(--deep-purple)]' }
+    { icon: Twitter, name: 'X', url: 'https://x.com/ronisaac5d', bg: 'bg-[var(--hot-pink)]' }
   ];
 
   return (
     <section id="contact" className="py-24 bg-[var(--cream)] relative overflow-hidden">
       {/* Background Shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-[var(--vibrant-yellow)] brutal-border rotate-12 opacity-20" />
-      <div className="absolute bottom-40 right-20 w-24 h-24 bg-[var(--hot-pink)] brutal-border -rotate-12 opacity-20" />
+      <div className="absolute top-20 left-10 w-32 h-32 bg-[var(--vibrant-yellow)] brutal-border rotate-12 opacity-20 hidden md:block" />
+      <div className="absolute bottom-40 right-20 w-24 h-24 bg-[var(--hot-pink)] brutal-border -rotate-12 opacity-20 hidden md:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -66,7 +65,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg text-[var(--grey)] mb-8">
-              Open to full-time roles, freelance builds and collaborations. Email is the fastest way to reach me.
+              Looking for software engineering internships or junior roles, and data analyst or data engineering roles. Also open to freelance builds. Email is the fastest way to reach me.
             </p>
 
             {contactInfo.map((info, index) => {
@@ -102,6 +101,9 @@ const Contact = () => {
                     <motion.a
                       key={social.name}
                       href={social.url}
+                      aria-label={social.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`${social.bg} text-white w-12 h-12 brutal-border-2 brutal-shadow hover-brutal flex items-center justify-center`}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -171,7 +173,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 brutal-border-2 focus:outline-none focus:brutal-shadow"
-                  placeholder="Project Inquiry"
+                  placeholder="Role, project or question"
                 />
               </div>
 
@@ -187,7 +189,7 @@ const Contact = () => {
                   required
                   rows={6}
                   className="w-full px-4 py-3 brutal-border-2 focus:outline-none focus:brutal-shadow resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="What would you like to talk about?"
                 />
               </div>
 

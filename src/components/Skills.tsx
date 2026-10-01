@@ -5,17 +5,17 @@ const Skills = () => {
     {
       title: 'Languages & Frameworks',
       bg: 'bg-[var(--electric-blue)]',
-      skills: ['JavaScript', 'TypeScript', 'Python', 'React', 'Node.js', 'Express', 'Flask', 'Tailwind CSS']
+      skills: ['JavaScript', 'TypeScript', 'Python', 'SQL', 'React', 'Next.js', 'Node.js', 'Express', 'Astro', 'Flask', 'Tailwind CSS']
     },
     {
       title: 'Data, Cloud & ML',
       bg: 'bg-[var(--hot-pink)]',
-      skills: ['PostgreSQL', 'MongoDB', 'SQL', 'AWS', 'Power BI', 'Pandas', 'TensorFlow/Keras', 'scikit-learn', 'Hugging Face', 'CNNs', 'NLP']
+      skills: ['PostgreSQL', 'MongoDB', 'Supabase', 'AWS', 'Power BI', 'Excel', 'Pandas', 'TensorFlow/Keras', 'scikit-learn', 'Hugging Face', 'CNNs', 'NLP']
     },
     {
       title: 'Tools & Integrations',
       bg: 'bg-[var(--lime-green)]',
-      skills: ['Git/GitHub', 'REST API design', 'M-PESA Daraja API', 'Docker', 'Raspberry Pi', 'Arduino']
+      skills: ['Git/GitHub', 'REST API design', 'M-PESA Daraja API', 'Docker', 'Sanity', 'Keystatic', 'Raspberry Pi', 'Arduino']
     }
   ];
 

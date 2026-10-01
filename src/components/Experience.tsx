@@ -5,13 +5,14 @@ const Experience = () => {
   const roles = [
     {
       title: 'Freelance Web Developer',
-      org: 'Association of Care Leavers Networks in Africa (ACNA)',
+      org: 'Independent',
       place: 'Nairobi, Kenya',
       dates: 'Apr 2026 – Present',
       bg: 'bg-[var(--electric-blue)]',
       points: [
-        'Built and deployed a membership and content platform for a continental NGO network on a headless CMS, so partner organisations across several African countries publish and manage their own content.',
-        'Worked directly with the client to turn organisational goals into requirements and delivered the site on a self-managed timeline.'
+        "ACNA (Association of Care Leavers Networks in Africa): for the launch of its flagship East Africa chapter, built the network's membership application and the websites of two founding member networks, Virtue Literacy Africa and Second Chances Kenya.",
+        'The Nile Explorer: rebuilt a South Sudan-focused media network\'s news site on Next.js and Sanity, migrated its WordPress archive and handed it over with documentation for the newsroom.',
+        'Worked directly with each client to turn organisational goals into requirements and delivered on self-managed timelines.'
       ]
     },
     {

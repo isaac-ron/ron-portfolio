@@ -1,36 +1,20 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
+  const now = [
+    { label: 'Building', text: 'FeeDesk, a school fee platform on M-PESA and bank APIs' },
+    { label: 'Freelancing', text: "Sites for ACNA's East Africa chapter and The Nile Explorer" },
+    { label: 'Finishing', text: 'BSc Computer Science, Kabarak University (Dec 2026)' }
+  ];
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[var(--cream)] pt-20">
       {/* Geometric Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 right-20 w-32 h-32 bg-[var(--electric-blue)] brutal-border brutal-shadow"
-          animate={{
-            rotate: [0, 90, 180, 270, 360],
-            y: [0, -20, 0]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute bottom-40 left-10 w-24 h-24 bg-[var(--hot-pink)] brutal-border brutal-shadow"
-          animate={{
-            rotate: [0, -90, -180, -270, -360],
-            x: [0, 20, 0]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-16 h-16 bg-[var(--vibrant-yellow)] brutal-border brutal-shadow"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+      <div className="absolute inset-0 overflow-hidden hidden md:block" aria-hidden="true">
+        <div className="absolute top-20 right-20 w-32 h-32 bg-[var(--electric-blue)] brutal-border brutal-shadow rotate-12" />
+        <div className="absolute bottom-40 left-10 w-24 h-24 bg-[var(--hot-pink)] brutal-border brutal-shadow -rotate-12" />
+        <div className="absolute top-28 left-1/2 w-16 h-16 bg-[var(--vibrant-yellow)] brutal-border brutal-shadow rotate-45" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -48,7 +32,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="font-bold uppercase tracking-wider text-sm">Available for Work</span>
+              <span className="font-bold uppercase tracking-wider text-sm">Open to Software & Data Roles</span>
             </motion.div>
 
             <motion.div
@@ -70,7 +54,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Full-stack and machine learning developer in Nairobi. I build payment platforms, crisis-response tools and websites for NGOs.
+              Full-stack and machine learning developer in Nairobi. I build payment platforms, crisis-response tools and websites for NGOs and newsrooms.
             </motion.p>
 
             <motion.div
@@ -103,15 +87,18 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
             >
               {[
-                { icon: Github, href: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/ron-otieno/', bg: 'bg-[var(--electric-blue)]' },
-                { icon: Mail, href: '#contact', bg: 'bg-[var(--orange)]' },
-              ].map((social, index) => {
+                { icon: Github, label: 'GitHub', href: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
+                { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/ron-otieno/', bg: 'bg-[var(--electric-blue)]' },
+                { icon: Mail, label: 'Email', href: 'mailto:isaacron195@gmail.com', bg: 'bg-[var(--orange)]' },
+              ].map((social) => {
                 const Icon = social.icon;
                 return (
                   <motion.a
-                    key={index}
+                    key={social.label}
                     href={social.href}
+                    aria-label={social.label}
+                    target={social.href.startsWith('http') ? '_blank' : undefined}
+                    rel="noopener noreferrer"
                     className={`w-12 h-12 ${social.bg} text-white brutal-border-2 brutal-shadow hover-brutal flex items-center justify-center`}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -122,47 +109,33 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Image */}
+          {/* Now */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="relative">
-              <motion.div
-                className="absolute -top-6 -left-6 w-full h-full bg-[var(--lime-green)] brutal-border"
-                animate={{ rotate: [0, 2, 0, -2, 0] }}
-                transition={{ duration: 5, repeat: Infinity }}
-              />
-              <div className="relative brutal-border-2 overflow-hidden bg-white">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzU2NDQzODAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Developer workspace"
-                  className="w-full h-[500px] object-cover"
-                />
+            <div className="absolute -top-3 -left-3 md:-top-6 md:-left-6 w-full h-full bg-[var(--lime-green)] brutal-border" />
+            <div className="relative bg-white brutal-border-2 p-8 space-y-6">
+              <h2 className="text-2xl font-bold uppercase">Now</h2>
+              <ul className="space-y-5">
+                {now.map((item) => (
+                  <li key={item.label} className="border-l-4 border-[var(--electric-blue)] pl-4">
+                    <div className="font-bold uppercase text-sm tracking-wider">{item.label}</div>
+                    <div className="text-lg text-[var(--grey)]">{item.text}</div>
+                  </li>
+                ))}
+              </ul>
+              <div className="bg-[var(--cream)] brutal-border-2 p-4">
+                <div className="font-bold uppercase text-sm tracking-wider mb-1">Looking for</div>
+                <p className="text-[var(--grey)]">
+                  Software engineering internships and junior roles, and data analyst or data engineering roles.
+                </p>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          <motion.a
-            href="#about"
-            className="flex flex-col items-center gap-2"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <span className="font-bold uppercase text-xs tracking-widest">Scroll</span>
-            <ArrowDown className="w-5 h-5" />
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );

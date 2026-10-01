@@ -15,17 +15,7 @@ const Logo = ({ className = "w-12 h-12" }: { className?: string }) => {
           <div className="absolute top-1/2 -translate-y-1/2 right-0 w-4 h-3 bg-[var(--hot-pink)] brutal-border-2" />
         </div>
         {/* Bottom accent */}
-        <motion.div
-          className="absolute -bottom-1 -right-1 w-3 h-3 bg-[var(--vibrant-yellow)] brutal-border-2"
-          animate={{
-            rotate: [0, 90, 180, 270, 360]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
+        <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-[var(--vibrant-yellow)] brutal-border-2 rotate-45" />
       </div>
 
       {/* D letter - made of geometric blocks */}
@@ -40,17 +30,7 @@ const Logo = ({ className = "w-12 h-12" }: { className?: string }) => {
           <div className="absolute bottom-0 -right-3 w-3 h-3 bg-[var(--vibrant-yellow)] brutal-border-2" />
         </div>
         {/* Top accent */}
-        <motion.div
-          className="absolute -top-1 -left-1 w-2 h-2 bg-[var(--hot-pink)] brutal-border"
-          animate={{
-            scale: [1, 1.3, 1]
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+        <div className="absolute -top-1 -left-1 w-2 h-2 bg-[var(--hot-pink)] brutal-border" />
       </div>
     </motion.div>
   );

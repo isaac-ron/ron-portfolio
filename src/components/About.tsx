@@ -37,7 +37,7 @@ const About = () => {
     { label: 'Egerton JS Hackathon 2025', value: '1st' },
     { label: 'Models on Hugging Face', value: '2' },
     { label: 'WasteNet Accuracy', value: '88.9%' },
-    { label: 'NGO, School & Media Sites', value: '6' }
+    { label: 'Live Client & NGO Sites', value: '5' }
   ];
 
   return (
@@ -77,12 +77,14 @@ const About = () => {
               I'm a computer science student at Kabarak University (coursework complete, graduating
               December 2026) based in Nairobi. I build web platforms and machine learning systems that
               have to work with real constraints: patchy connections, mobile money and small budgets.
+              I'm looking for software engineering internships or junior roles, and data analyst or
+              data engineering roles.
             </p>
             <p className="text-lg text-[var(--grey)] leading-relaxed">
               Right now I'm building FeeDesk, a fee platform that brings a school's M-PESA and bank
-              payments into one place, and a staff and parent portal for The Grace Schools. I also
-              build sites for NGOs and media organisations, including the Association of Care Leavers
-              Networks in Africa (ACNA), Virtue Literacy Africa and The Nile Explorer.
+              payments into one place. I also freelance: for the Association of Care Leavers Networks
+              in Africa (ACNA) I built the sites of two founding member networks for the launch of its
+              East Africa chapter, and I rebuilt The Nile Explorer's news site.
             </p>
             <p className="text-lg text-[var(--grey)] leading-relaxed">
               Before that I interned in IT service delivery at the Kenya Revenue Authority and completed
@@ -92,7 +94,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="bg-[var(--cream)] p-8 brutal-border brutal-shadow-lg"
+            className="bg-[var(--cream)] p-8 brutal-border brutal-shadow-lg self-start"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
