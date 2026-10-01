@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -29,8 +29,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, title: 'Email', value: 'isaacron195@gmail.com', link: 'mailto:isaacron195@gmail.com', bg: 'bg-[var(--electric-blue)]' },
-    { icon: Phone, title: 'Phone', value: '+1 (555) 123-4567', link: 'tel:+15551234567', bg: 'bg-[var(--hot-pink)]' },
-    { icon: MapPin, title: 'Location', value: 'Nairobi, KE', link: '#', bg: 'bg-[var(--vibrant-yellow)]' }
+    { icon: MapPin, title: 'Location', value: 'Nairobi, KE', link: undefined, bg: 'bg-[var(--vibrant-yellow)]' }
   ];
 
   const socialLinks = [

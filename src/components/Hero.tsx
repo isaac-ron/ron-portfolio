@@ -86,7 +86,7 @@ const Hero = () => {
               >
                 View Work
               </motion.a>
-              
+
               <motion.a
                 href="#contact"
                 className="px-8 py-4 bg-white brutal-border brutal-shadow hover-brutal font-bold uppercase tracking-wide"
@@ -103,8 +103,8 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
             >
               {[
-                { icon: Github, href: '#', bg: 'bg-[var(--charcoal)]' },
-                { icon: Linkedin, href: '#', bg: 'bg-[var(--electric-blue)]' },
+                { icon: Github, href: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/ron-isaac-8132bb2b5/', bg: 'bg-[var(--electric-blue)]' },
                 { icon: Mail, href: '#contact', bg: 'bg-[var(--orange)]' },
               ].map((social, index) => {
                 const Icon = social.icon;

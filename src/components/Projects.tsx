@@ -3,42 +3,69 @@ import { ExternalLink, Github } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const Projects = () => {
-  const projects = [
+  const projects: {
+    id: number;
+    title: string;
+    description: string;
+    image?: string;
+    technologies: string[];
+    category: string;
+    bg: string;
+    featured: boolean;
+    demoUrl?: string;
+    githubUrl?: string;
+  }[] = [
     {
       id: 1,
-      title: 'E-Commerce Dashboard',
-      description: 'Real-time analytics dashboard with sales tracking and inventory management.',
-      image: 'https://images.unsplash.com/photo-1665470909939-959569b20021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NTY0ODYzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-      category: 'Web Dev',
-      bg: 'bg-[var(--electric-blue)]',
+      title: 'CrisisConnect',
+      description: 'Community crisis reporting with ML triage. Residents report emergencies from their phone (even offline); fine-tuned RoBERTa models classify and prioritize reports, related reports are grouped into incidents, and trust comes from corroboration across independent reporters, photo evidence and USGS/GDACS alerts. Models are int8-quantized ONNX (515 MB to 130 MB) so the ML service fits on a free 512 MB instance.',
+      image: 'https://raw.githubusercontent.com/isaac-ron/TSCrisisConnect/main/docs/screenshots/map.png',
+      technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'PyTorch', 'ONNX'],
+      category: 'ML + Full Stack',
+      bg: 'bg-[var(--hot-pink)]',
       featured: true,
-      demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/isaac-ron/TSCrisisConnect'
     },
     {
       id: 2,
-      title: 'AI Image Recognition',
-      description: 'ML application classifying images with 95% accuracy using deep learning.',
-      image: 'https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDF8fHx8MTc1NjQ1MzI2NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      technologies: ['Python', 'TensorFlow', 'OpenCV', 'Flask'],
-      category: 'ML',
-      bg: 'bg-[var(--hot-pink)]',
+      title: 'FeeDesk',
+      description: "Multi-tenant fee management system for schools. Handles M-PESA payments, bank statement imports, term-based billing, SMS receipts via Africa's Talking and live transaction updates, with role-based access for admins, bursars and teachers.",
+      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.IO', 'M-PESA API', 'Docker'],
+      category: 'Full Stack',
+      bg: 'bg-[var(--electric-blue)]',
       featured: true,
-      demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/isaac-ron/FeeDesk'
     },
     {
       id: 3,
-      title: 'Task Management App',
-      description: 'Collaborative platform with real-time updates and advanced filtering.',
-      image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU2MzgyODQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      technologies: ['Vue.js', 'Tailwind', 'Supabase'],
+      title: 'ReRoot Africa',
+      description: 'Media website, built from a high-fidelity Figma design.',
+      technologies: ['React', 'TypeScript', 'Tailwind'],
       category: 'Web Dev',
       bg: 'bg-[var(--lime-green)]',
       featured: false,
-      demoUrl: '#',
-      githubUrl: '#'
+      demoUrl: 'https://rerootafrica.vercel.app',
+      githubUrl: 'https://github.com/isaac-ron/rerootafrica'
+    },
+    {
+      id: 4,
+      title: 'Virtue Literacy Africa',
+      description: 'Content-managed organisation website with blog, events, team and gallery pages editable through Keystatic.',
+      technologies: ['Astro', 'TypeScript', 'Keystatic'],
+      category: 'Web Dev',
+      bg: 'bg-[var(--orange)]',
+      featured: false,
+      githubUrl: 'https://github.com/isaac-ron/virtueliteracyafrica'
+    },
+    {
+      id: 5,
+      title: 'KES Currency Converter',
+      description: 'Small Python package for converting currencies with the Kenyan Shilling as the base rate.',
+      technologies: ['Python'],
+      category: 'Package',
+      bg: 'bg-[var(--deep-purple)]',
+      featured: false,
+      githubUrl: 'https://github.com/isaac-ron/currencyconverterpackage'
     }
   ];
 
@@ -76,11 +103,11 @@ const Projects = () => {
                 <div className={`inline-block ${project.bg} text-white px-4 py-2 brutal-border-2 font-bold uppercase text-sm`}>
                   {project.category}
                 </div>
-                
+
                 <h3 className="text-3xl md:text-4xl font-bold uppercase">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-lg text-[var(--grey)]">
                   {project.description}
                 </p>
@@ -97,23 +124,31 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-4">
+                  {project.demoUrl && (
                   <motion.a
                     href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`flex items-center gap-2 px-6 py-3 ${project.bg} text-white brutal-border brutal-shadow hover-brutal font-bold uppercase`}
                     whileTap={{ scale: 0.98 }}
                   >
                     <ExternalLink className="w-4 h-4" />
                     Demo
                   </motion.a>
-                  
+                  )}
+
+                  {project.githubUrl && (
                   <motion.a
                     href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-6 py-3 bg-white brutal-border brutal-shadow hover-brutal font-bold uppercase"
                     whileTap={{ scale: 0.98 }}
                   >
                     <Github className="w-4 h-4" />
                     Code
                   </motion.a>
+                  )}
                 </div>
               </div>
 
@@ -125,11 +160,17 @@ const Projects = () => {
                 <div className="relative">
                   <div className={`absolute -bottom-4 -right-4 w-full h-full ${project.bg} brutal-border`} />
                   <div className="relative brutal-border-2 overflow-hidden bg-white">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-80 lg:h-96 object-cover"
-                    />
+                    {project.image ? (
+                      <ImageWithFallback
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-80 lg:h-96 object-cover object-top"
+                      />
+                    ) : (
+                      <div className="w-full h-80 lg:h-96 flex items-center justify-center bg-[var(--cream)]">
+                        <span className="text-4xl md:text-5xl font-bold uppercase">{project.title}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -140,7 +181,7 @@ const Projects = () => {
         {/* Other Projects */}
         <div className="space-y-12">
           <h3 className="text-3xl font-bold uppercase text-center">More Projects</h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => !p.featured).map((project, index) => (
               <motion.div
@@ -152,20 +193,26 @@ const Projects = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="relative brutal-border-2 border-t-0 border-x-0 overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  {project.image ? (
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-48 flex items-end p-4 pt-16 bg-[var(--cream)]">
+                      <span className="text-2xl font-bold uppercase">{project.title}</span>
+                    </div>
+                  )}
                   <div className={`absolute top-4 left-4 ${project.bg} text-white px-3 py-1 brutal-border-2 font-bold text-xs uppercase`}>
                     {project.category}
                   </div>
                 </div>
-                
+
                 <div className="p-6 space-y-4">
                   <h4 className="text-xl font-bold uppercase">{project.title}</h4>
                   <p className="text-[var(--grey)]">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
@@ -178,18 +225,26 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-2 pt-2">
+                    {project.demoUrl && (
                     <a
                       href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex-1 text-center py-2 ${project.bg} text-white brutal-border-2 font-bold text-sm uppercase`}
                     >
                       Demo
                     </a>
+                    )}
+                    {project.githubUrl && (
                     <a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 text-center py-2 bg-white brutal-border-2 font-bold text-sm uppercase"
                     >
                       Code
                     </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -205,11 +260,13 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="#"
+            href="https://github.com/isaac-ron"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-10 py-5 bg-[var(--charcoal)] text-white brutal-border brutal-shadow-lg hover-brutal font-bold uppercase tracking-wide"
             whileTap={{ scale: 0.98 }}
           >
-            View All Projects →
+            More on GitHub →
           </motion.a>
         </motion.div>
       </div>
