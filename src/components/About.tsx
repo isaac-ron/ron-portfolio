@@ -1,43 +1,43 @@
 import { motion } from 'framer-motion';
-import { Code, Brain, Coffee, Zap } from 'lucide-react';
+import { Code, Brain, Smartphone, BarChart3 } from 'lucide-react';
 
 const About = () => {
   const features = [
     {
       icon: Code,
-      title: 'Frontend Dev',
-      description: 'Building responsive interfaces with modern frameworks.',
+      title: 'Full-Stack Web',
+      description: 'React, Node.js and Express apps on PostgreSQL or MongoDB.',
       bg: 'bg-[var(--electric-blue)]',
       borderColor: 'border-[var(--electric-blue)]'
     },
     {
       icon: Brain,
       title: 'Machine Learning',
-      description: 'Creating intelligent systems with data-driven insights.',
+      description: 'NLP and computer vision models, from fine-tuning to running on small hardware.',
       bg: 'bg-[var(--hot-pink)]',
       borderColor: 'border-[var(--hot-pink)]'
     },
     {
-      icon: Coffee,
-      title: 'Problem Solving',
-      description: 'Tackling complex challenges with creative solutions.',
+      icon: Smartphone,
+      title: 'Payments',
+      description: 'M-PESA Daraja and bank API integrations that record payments automatically.',
       bg: 'bg-[var(--vibrant-yellow)]',
       borderColor: 'border-[var(--vibrant-yellow)]'
     },
     {
-      icon: Zap,
-      title: 'Performance',
-      description: 'Optimizing for speed and exceptional UX.',
+      icon: BarChart3,
+      title: 'Data Analytics',
+      description: 'Combining messy datasets into dashboards with SQL, Power BI and Pandas.',
       bg: 'bg-[var(--lime-green)]',
       borderColor: 'border-[var(--lime-green)]'
     }
   ];
 
   const stats = [
-    { label: 'Years Exp', value: '2+' },
-    { label: 'Projects', value: '5+' },
-    { label: 'Clients', value: '1+' },
-    { label: 'Coffee', value: '∞' }
+    { label: 'Egerton JS Hackathon 2025', value: '1st' },
+    { label: 'Models on Hugging Face', value: '2' },
+    { label: 'WasteNet Accuracy', value: '88.9%' },
+    { label: 'NGO, School & Media Sites', value: '6' }
   ];
 
   return (
@@ -61,7 +61,7 @@ const About = () => {
             <span className="font-bold uppercase tracking-wider text-sm text-white">About Me</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl">
-            BUILDING THE <span className="text-[var(--electric-blue)]">FUTURE</span>, ONE LINE AT A TIME
+            SOFTWARE FOR <span className="text-[var(--electric-blue)]">SCHOOLS</span>, NGOS AND FIRST RESPONDERS
           </h2>
         </motion.div>
 
@@ -74,16 +74,20 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <p className="text-lg text-[var(--grey)] leading-relaxed">
-              I'm a developer with 2+ years in web development and 1 year in machine learning. 
-              I don't just write code—I craft experiences that users actually enjoy.
+              I'm a computer science student at Kabarak University (coursework complete, graduating
+              December 2026) based in Nairobi. I build web platforms and machine learning systems that
+              have to work with real constraints: patchy connections, mobile money and small budgets.
             </p>
             <p className="text-lg text-[var(--grey)] leading-relaxed">
-              My work sits at the intersection of design and engineering. Every project is an 
-              opportunity to push boundaries and create something people remember.
+              Right now I'm building FeeDesk, a fee platform that brings a school's M-PESA and bank
+              payments into one place, and a staff and parent portal for The Grace Schools. I also
+              build sites for NGOs and media organisations, including the Association of Care Leavers
+              Networks in Africa (ACNA), Virtue Literacy Africa and The Nile Explorer.
             </p>
             <p className="text-lg text-[var(--grey)] leading-relaxed">
-              When I'm not coding, I'm exploring new tech, contributing to open-source, or 
-              sharing what I've learned with the community.
+              Before that I interned in IT service delivery at the Kenya Revenue Authority and completed
+              the ALX Data Analytics programme. I also volunteer with Vijana Empowerment Initiative,
+              where I built their website and teach web development to young people in Bomet.
             </p>
           </motion.div>
 
@@ -94,7 +98,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-bold mb-6 uppercase">Quick Stats</h3>
+            <h3 className="text-2xl font-bold mb-6 uppercase">At a Glance</h3>
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
                 <motion.div
@@ -138,22 +142,6 @@ const About = () => {
           })}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold mb-6 uppercase">Let's Work Together</h3>
-          <motion.a
-            href="#contact"
-            className="inline-block px-10 py-5 bg-[var(--hot-pink)] text-white brutal-border brutal-shadow-lg hover-brutal font-bold uppercase tracking-wide"
-            whileTap={{ scale: 0.98 }}
-          >
-            Get In Touch
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );

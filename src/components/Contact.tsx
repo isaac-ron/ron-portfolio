@@ -9,7 +9,6 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -18,13 +17,11 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // No backend: hand the message to the visitor's mail client.
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log('Form submitted:', formData);
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    const body = `${formData.message}\n\n${formData.name} <${formData.email}>`;
+    window.location.href = `mailto:isaacron195@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const contactInfo = [
@@ -34,7 +31,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Github, name: 'GitHub', url: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
-    { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/ron-isaac-8132bb2b5/', bg: 'bg-[var(--electric-blue)]' },
+    { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/ron-otieno/', bg: 'bg-[var(--electric-blue)]' },
     { icon: Twitter, name: 'Twitter', url: 'https://x.com/ronisaac5d', bg: 'bg-[var(--hot-pink)]' },
     { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/isaacxron', bg: 'bg-[var(--deep-purple)]' }
   ];
@@ -69,7 +66,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg text-[var(--grey)] mb-8">
-              Got a project in mind? Drop me a line and let's create something amazing together.
+              Open to full-time roles, freelance builds and collaborations. Email is the fastest way to reach me.
             </p>
 
             {contactInfo.map((info, index) => {
@@ -196,41 +193,16 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full md:w-auto px-10 py-4 bg-[var(--electric-blue)] text-white brutal-border brutal-shadow-lg hover-brutal font-bold uppercase tracking-wide disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className="w-full md:w-auto px-10 py-4 bg-[var(--electric-blue)] text-white brutal-border brutal-shadow-lg hover-brutal font-bold uppercase tracking-wide flex items-center justify-center gap-2"
+                whileTap={{ scale: 0.98 }}
               >
-                {isSubmitting ? (
-                  <>
-                    <motion.div
-                      className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Send Message
-                  </>
-                )}
+                <Send className="w-5 h-5" />
+                Send Message
               </motion.button>
             </form>
           </motion.div>
         </div>
 
-        {/* Quote */}
-        <motion.div
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <blockquote className="text-2xl md:text-3xl font-bold uppercase max-w-3xl mx-auto">
-            "Good design is <span className="text-[var(--hot-pink)]">obvious</span>. Great design is <span className="text-[var(--electric-blue)]">transparent</span>."
-          </blockquote>
-        </motion.div>
       </div>
     </section>
   );

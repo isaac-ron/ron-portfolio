@@ -17,16 +17,17 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white brutal-border-2 border-t-0 border-x-0 brutal-shadow' 
+        scrolled
+          ? 'bg-white brutal-border-2 border-t-0 border-x-0 brutal-shadow'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}

@@ -10,8 +10,9 @@ const Footer = () => {
 
   const quickLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -39,8 +40,8 @@ const Footer = () => {
                 </h3>
               </div>
               <p className="text-gray-300">
-                Web developer and ML enthusiast building bold digital experiences. 
-                Let's create something that stands out.
+                Full-stack and machine learning developer in Nairobi, building
+                payment platforms, crisis-response tools and NGO websites.
               </p>
               <div className="flex items-center gap-2 text-sm">
                 <span>Made with</span>
@@ -79,7 +80,7 @@ const Footer = () => {
               </ul>
             </motion.div>
 
-            {/* Newsletter */}
+            {/* Elsewhere */}
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0, y: 20 }}
@@ -87,23 +88,26 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <h4 className="font-bold uppercase tracking-wider">Stay Updated</h4>
-              <p className="text-gray-300">
-                Get notified about new projects and insights.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-1 px-4 py-2 bg-white text-[var(--charcoal)] brutal-border-2 focus:outline-none font-semibold"
-                />
-                <motion.button
-                  className="px-4 py-2 bg-[var(--electric-blue)] text-white brutal-border-2 brutal-shadow hover-brutal font-bold uppercase"
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Go
-                </motion.button>
-              </div>
+              <h4 className="font-bold uppercase tracking-wider">Elsewhere</h4>
+              <ul className="space-y-3">
+                {[
+                  { name: 'isaacron195@gmail.com', href: 'mailto:isaacron195@gmail.com' },
+                  { name: 'GitHub', href: 'https://github.com/isaac-ron' },
+                  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ron-otieno/' },
+                  { name: 'Hugging Face', href: 'https://huggingface.co/ron4444444' }
+                ].map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-[var(--electric-blue)] transition-colors font-semibold"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           </div>
         </div>
@@ -121,7 +125,7 @@ const Footer = () => {
           <p className="text-sm text-gray-300 font-semibold">
             © {currentYear} RONISAAC. All rights reserved.
           </p>
-          
+
           <motion.button
             onClick={scrollToTop}
             className="flex items-center gap-2 px-6 py-2 bg-white text-[var(--charcoal)] brutal-border-2 brutal-shadow hover-brutal font-bold uppercase text-sm"

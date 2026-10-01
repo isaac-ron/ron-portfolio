@@ -70,7 +70,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Web Developer & AI Enthusiast building bold digital experiences that actually work.
+              Full-stack and machine learning developer in Nairobi. I build payment platforms, crisis-response tools and websites for NGOs.
             </motion.p>
 
             <motion.div
@@ -104,7 +104,7 @@ const Hero = () => {
             >
               {[
                 { icon: Github, href: 'https://github.com/isaac-ron', bg: 'bg-[var(--charcoal)]' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/ron-isaac-8132bb2b5/', bg: 'bg-[var(--electric-blue)]' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/ron-otieno/', bg: 'bg-[var(--electric-blue)]' },
                 { icon: Mail, href: '#contact', bg: 'bg-[var(--orange)]' },
               ].map((social, index) => {
                 const Icon = social.icon;
