@@ -34,7 +34,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-3">
-                <Logo className="w-10 h-10" />
+                <Logo size={40} dark />
                 <h3 className="text-3xl font-bold uppercase">
                   RON<span className="text-[var(--electric-blue)]">ISAAC</span>
                 </h3>

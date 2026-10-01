@@ -43,7 +43,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Logo className="w-12 h-12" />
+            <Logo size={40} />
             <span className="text-2xl font-bold uppercase hidden sm:block">
               RON<span className="text-[var(--electric-blue)]">ISAAC</span>
             </span>
