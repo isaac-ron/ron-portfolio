@@ -109,11 +109,11 @@ const Experience = () => {
     {
       title: 'Data Engineering Program',
       org: 'ALX',
-      place: 'Certification, in progress',
-      dates: 'May 2026 – Present',
+      place: 'Certification',
+      dates: 'May 2026 – Oct 2026',
       points: [
-        'Building ETL pipelines in Python, orchestrated with Airflow, containerised with Docker and scaled out with Spark.',
-        'Covering batch and streaming ingestion, data modelling and architecture, and data security practices.'
+        'Built ETL pipelines in Python, orchestrated with Airflow, containerised with Docker and scaled out with Spark.',
+        'Covered batch and streaming ingestion, data modelling and architecture, and data security practices.'
       ]
     },
     {
