@@ -35,7 +35,7 @@ const Experience = () => {
         },
         {
           lead: 'The Nile Explorer',
-          text: "Rebuilt a media network's site (news, podcast, documentaries and festival) on Next.js with an embedded Sanity Studio. Publishing revalidates pages on demand, so the newsroom never waits on a rebuild, and read and share counts rank the front page's Top stories. Wrote a repeatable WordPress migration with a dry-run mode, and a handover manual covering both the publishing workflow and code maintenance."
+          text: "Rebuilt a media network's site (news, podcast, documentaries and festival) on Next.js with an embedded Sanity Studio. Publishing revalidates pages on demand, so the newsroom never waits on a rebuild, and read and share counts rank the front page's Top stories. Wrote a repeatable WordPress migration with a dry-run mode, automated weekly Sanity content backups with GitHub Actions, and wrote a handover manual covering both the publishing workflow and code maintenance."
         },
         {
           text: 'Worked directly with each client to gather requirements and turn organisational goals into working sites, delivered on self-managed timelines.'
@@ -67,13 +67,13 @@ const Experience = () => {
       summary: 'IT Service Delivery Department, supporting the systems behind national tax administration.',
       points: [
         {
-          text: 'Provided first-line technical support and troubleshooting for enterprise hardware, software and network issues, keeping downtime on critical tax administration systems to a minimum.'
+          text: 'Supported day-to-day IT operations: troubleshooting printer connectivity and print-job configuration, carrying out preventive maintenance on staff computers, and helping employees set up Check Point Remote Access VPN.'
         },
         {
-          text: 'Documented user issues, tracked them through to resolution and kept teams updated on status.'
+          text: 'Collected and verified employee-level information for ISO compliance checks.'
         },
         {
-          text: 'Coordinated with senior IT staff to implement fixes beyond first-line scope.'
+          text: 'Documented recurring issues and their fixes in a Notion task tracker, so the team could troubleshoot consistently and share what worked.'
         }
       ]
     },
@@ -110,7 +110,7 @@ const Experience = () => {
       title: 'Data Engineering Program',
       org: 'ALX',
       place: 'Certification',
-      dates: 'May 2026 – Oct 2026',
+      dates: 'May 2026 – Nov 2026',
       points: [
         'Built ETL pipelines in Python, orchestrated with Airflow, containerised with Docker and scaled out with Spark.',
         'Covered batch and streaming ingestion, data modelling and architecture, and data security practices.'

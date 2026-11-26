@@ -5,7 +5,7 @@ const Hero = () => {
   const now = [
     { label: 'Building', text: 'FeeDesk, a school fee platform on M-PESA and bank APIs' },
     { label: 'Freelancing', text: "Sites for ACNA's East Africa chapter and The Nile Explorer" },
-    { label: 'Learning', text: 'Data engineering with ALX: Airflow, Spark and Docker pipelines' },
+    { label: 'Completed', text: 'ALX Data Engineering, then an M-PESA ELT pipeline on Airflow and Postgres' },
     { label: 'Finishing', text: 'BSc Computer Science, Kabarak University (Dec 2026)' }
   ];
 

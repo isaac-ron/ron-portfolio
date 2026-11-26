@@ -44,7 +44,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'FeeDesk',
-      description: "A venture I'm building: a multi-tenant fee platform for schools. Safaricom Daraja webhooks and bank IPN APIs feed transactions from every source into one reporting view, alongside term-based billing, SMS receipts and role-based access for admins, bursars and teachers. Not yet in production; The Grace Schools is the planned pilot.",
+      description: "A venture I'm building: a multi-tenant fee platform for schools. Safaricom Daraja webhooks and bank IPN APIs feed transactions from every source into one reporting view, where payments are matched to students, checked for duplicates and allocated across outstanding fees, alongside term-based billing, SMS receipts and role-based access for admins, bursars and teachers. Not yet in production; The Grace Schools is the planned pilot.",
       technologies: ['React', 'Node.js', 'MongoDB', 'M-PESA Daraja', 'Bank IPN APIs', 'Socket.IO'],
       category: 'Venture',
       bg: 'bg-[var(--deep-purple)]',
@@ -127,6 +127,16 @@ const Projects = () => {
       category: 'ML + Hardware',
       bg: 'bg-[var(--lime-green)]',
       featured: false
+    },
+    {
+      id: 11,
+      title: 'M-PESA Sales Data Pipeline',
+      description: 'Batch ELT pipeline that loads daily M-PESA till exports from 25 shops into a Postgres warehouse: idempotent raw loads with lineage, a cleaning layer that quarantines bad rows instead of dropping them, and a star schema with SCD Type 2 shops. Airflow runs it daily behind quality and volume gates, with an end-to-end test in CI.',
+      technologies: ['Python', 'PostgreSQL', 'Airflow', 'Docker', 'SQL'],
+      category: 'Data Engineering',
+      bg: 'bg-[var(--orange)]',
+      featured: false,
+      githubUrl: 'https://github.com/isaac-ron/MPESA-Transactions-Data-Pipeline'
     },
     {
       id: 10,

@@ -88,7 +88,7 @@ const About = () => {
             </p>
             <p className="text-lg text-[var(--grey)] leading-relaxed">
               Before that I interned in IT service delivery at the Kenya Revenue Authority and completed
-              the ALX Data Analytics programme. I also volunteer with Vijana Empowerment Initiative,
+              ALX's Data Analytics and Data Engineering programmes. I also volunteer with Vijana Empowerment Initiative,
               where I built their website and teach web development to young people in Bomet.
             </p>
           </motion.div>

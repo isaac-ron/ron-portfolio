@@ -47,7 +47,7 @@
   <div class="row"><span class="sub">Independent</span><span class="r">Apr 2026 – Present</span></div>
   <ul>
     <li><b>Association of Care Leavers Networks in Africa (ACNA):</b> for the launch of its flagship East Africa chapter, built the network’s membership application and the websites of two founding member networks, Virtue Literacy Africa and Second Chances Kenya. Staff manage content through a git-based headless CMS (Astro, Keystatic).</li>
-    <li><b>The Nile Explorer:</b> rebuilt a regional media network’s news site on Next.js and Sanity, with on-demand revalidation on publish and readership-ranked Top stories; migrated the WordPress archive with a repeatable, dry-run-capable script and wrote a handover manual for the newsroom.</li>
+    <li><b>The Nile Explorer:</b> rebuilt a regional media network’s news site on Next.js and Sanity, with on-demand revalidation on publish and readership-ranked Top stories; migrated the WordPress archive with a repeatable, dry-run-capable script, automated weekly Sanity backups with GitHub Actions, and wrote a handover manual for the newsroom.</li>
     <li>Gathered requirements directly with clients and delivered on self-managed timelines.</li>
   </ul>
 </div>
@@ -55,8 +55,8 @@
   <div class="row"><span class="l">IT Support Intern</span><span class="r">Nairobi, Kenya</span></div>
   <div class="row"><span class="sub">Kenya Revenue Authority, IT Service Delivery Department</span><span class="r">Jan 2026 – Mar 2026</span></div>
   <ul>
-    <li>Provided first-line technical support and troubleshooting for enterprise hardware, software and network issues, keeping downtime on critical tax administration systems to a minimum.</li>
-    <li>Documented user issues, tracked resolutions and communicated status updates across teams, coordinating with senior IT staff to implement fixes.</li>
+    <li>Troubleshot printer connectivity and print-job configuration, performed preventive maintenance on staff computers, and set up Check Point Remote Access VPN for employees.</li>
+    <li>Collected and verified employee-level information for ISO compliance checks; documented recurring issues and fixes in a Notion tracker.</li>
   </ul>
 </div>
 
@@ -64,16 +64,22 @@
 <div class="entry">
   <div class="row"><span class="l">FeeDesk – Multi-tenant School Fee Platform <span class="stack">| React, Node.js, MongoDB, M-Pesa Daraja, Bank IPN APIs</span></span><span class="r">Jan 2026 – Present</span></div>
   <ul>
-    <li>Designed and built the backend services and database schema for a multi-tenant platform that reconciles M-Pesa and bank payments against student fee balances.</li>
-    <li>Integrated Safaricom Daraja webhooks and bank IPN APIs as a passive payment listener feeding one reporting view.</li>
-    <li>Led product scoping and requirements gathering, including data-compliance research. Running on staging ahead of a planned school pilot.</li>
+    <li>Designed and built the backend services and database schema for a multi-tenant platform that reconciles M-Pesa and bank payments against student fee balances, with school-scoped data models and access control.</li>
+    <li>Processed Safaricom Daraja and bank IPN notifications asynchronously: matching transactions to students, detecting duplicates, holding unmatched payments and allocating receipts across outstanding fees; covered with automated tests.</li>
+    <li>Led product scoping and requirements gathering, including data-compliance research; running on staging ahead of a school pilot.</li>
   </ul>
 </div>
 <div class="entry">
-  <div class="row"><span class="l">CrisisConnect – NLP Crisis Detection &amp; Triage <span class="stack">| TypeScript, Node.js, PostgreSQL, Python, ONNX</span></span><span class="r">Sep 2025</span></div>
+  <div class="row"><span class="l">CrisisConnect – NLP Crisis Detection &amp; Triage <span class="stack">| TypeScript, Node.js, PostgreSQL, Python, FastAPI, ONNX</span></span><span class="r">Sep 2025 – Nov 2025</span></div>
   <ul>
     <li>Built the backend and data pipeline for a crisis-reporting app, from raw report ingestion (including offline-queued reports) through model classification to a real-time alert API.</li>
     <li>Fine-tuned two RoBERTa classifiers evaluated on held-out disasters: priority macro F1 0.416 (baseline 0.273) and urgent recall 60% (baseline 36%); int8-quantized to ONNX (515 MB to 130 MB) to run on a free 512 MB instance.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row"><span class="l">M-Pesa Sales Data Pipeline <span class="stack">| Python, PostgreSQL, SQL, Airflow, Docker</span></span><span class="r">Oct 2026 – Nov 2026</span></div>
+  <ul>
+    <li>Built a batch ELT pipeline loading daily till exports from 25 shops into a Postgres star schema (SCD Type 2), with idempotent loads, lineage and quarantine of bad rows; Airflow schedules it behind data-quality and volume gates, tested end to end in CI.</li>
   </ul>
 </div>
 <div class="entry">
@@ -90,17 +96,15 @@
   <div>Coursework: Data Structures &amp; Algorithms, Database Systems, OOP, Web Development, Machine Learning</div>
 </div>
 <div class="entry">
-  <div class="row"><span class="l">ALX Data Engineering Program</span><span class="r">May 2026 – Oct 2026</span></div>
+  <div class="row"><span class="l">ALX Data Engineering Program</span><span class="r">May 2026 – Nov 2026</span></div>
   <ul>
-    <li>Built ETL pipelines in Python, orchestrated with Airflow, containerised with Docker and scaled out with Spark.</li>
-    <li>Covered batch and streaming ingestion, data modelling and architecture, and data security practices.</li>
+    <li>Built Python ETL pipelines with Airflow, Docker and Spark: batch and streaming ingestion, data modelling and architecture, data security.</li>
   </ul>
 </div>
 <div class="entry">
   <div class="row"><span class="l">ALX Data Analytics Program with Professional Skills</span><span class="r">Sep 2025 – Apr 2026</span></div>
   <ul>
-    <li>Project-based program in data cleaning, exploratory analysis and visualisation, combining multi-source datasets into dashboards with SQL, Excel, Power BI and Pandas.</li>
-    <li>Professional skills: time management, prioritisation, communication and cross-functional teamwork.</li>
+    <li>Data cleaning, exploratory analysis and multi-source dashboards with SQL, Excel, Power BI and Pandas, plus a professional skills track.</li>
   </ul>
 </div>
 
@@ -117,8 +121,8 @@
 <h2>Technical Skills</h2>
 <div class="skills">
   <p><b>Languages:</b> Python, JavaScript, TypeScript, SQL</p>
-  <p><b>Web &amp; Backend:</b> React, Next.js, Node.js, Express, Flask, Astro, REST APIs, M-Pesa Daraja API</p>
-  <p><b>Data &amp; ML:</b> PostgreSQL, MongoDB, Supabase, Pandas, Power BI, Excel, Airflow, Spark, TensorFlow/Keras, scikit-learn, Hugging Face</p>
+  <p><b>Web &amp; Backend:</b> React, Next.js, Node.js, Express, Flask, FastAPI, Astro, REST APIs, M-Pesa Daraja API</p>
+  <p><b>Data &amp; ML:</b> PostgreSQL, MongoDB/Mongoose, Supabase, Pandas, Power BI, Excel, Airflow, Spark, TensorFlow/Keras, scikit-learn, Hugging Face, ONNX</p>
   <p><b>Tools &amp; Cloud:</b> Git/GitHub, Docker, AWS, Linux, Sanity, Keystatic</p>
 </div>
 </body>
